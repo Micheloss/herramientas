@@ -1,3 +1,25 @@
 {
- "herramientas": []
+ "herramientas": [
+  {
+   "id": "el-cheat-de-warzone-que-te-hackeaba-a-ti",
+   "tipo": "juego",
+   "nombre": "EL CHEAT DE WARZONE QUE TE HACKEABA A TI",
+   "url": "https://research.activision.com/publications/2021/03/cheating-cheaters-malware-delivered-as-call-of-duty-cheats",
+   "detalle": "Activision Research",
+   "fuentes": [
+    {
+     "medio": "VICE",
+     "titulo": "Activision Reveals Malware Disguised as Call of Duty: Warzone Cheats",
+     "url": "https://www.vice.com/en/article/activision-reveals-malware-disguised-as-call-of-duty-warzone-cheats/"
+    }
+   ],
+   "que": "Cheating Cheaters: Malware Delivered as Call of Duty Cheats",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:49:18+00:00",
+   "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
+  }
+ ],
+ "actualizado": "2026-11-26T11:49:18+00:00"
 }
