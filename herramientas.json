@@ -1,6 +1,26 @@
 {
  "herramientas": [
   {
+   "id": "el-antitrampas-de-street-fighter-era-una-puerta-trasera",
+   "tipo": "juego",
+   "nombre": "EL ANTITRAMPAS DE STREET FIGHTER ERA UNA PUERTA TRASERA",
+   "url": "https://www.theregister.com/on-prem/2016/09/23/double-ko-capcoms-street-fighter-v-installs-hidden-rootkit-on-pcs/1119526",
+   "detalle": "The Register",
+   "fuentes": [
+    {
+     "medio": "HdM Stuttgart – Computer Science Blog",
+     "titulo": "Security Knockout: How Capcom's Street Fighter 5 punched a hole in Intel's security system",
+     "url": "https://blog.mi.hdm-stuttgart.de/index.php/2023/07/17/security-knockout-how-capcoms-street-fighter-5-punched-a-hole-in-intels-security-system/"
+    }
+   ],
+   "que": "Capcom's Street Fighter V installs hidden rootkit on PCs",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:51:10+00:00",
+   "tema": "el-antitrampas-de-street-fighter-era-una-puerta-trasera-fc524e"
+  },
+  {
    "id": "el-cheat-de-warzone-que-te-hackeaba-a-ti",
    "tipo": "juego",
    "nombre": "EL CHEAT DE WARZONE QUE TE HACKEABA A TI",
@@ -21,5 +41,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:49:18+00:00"
+ "actualizado": "2026-11-26T11:51:10+00:00"
 }
