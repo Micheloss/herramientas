@@ -1,6 +1,20 @@
 {
  "herramientas": [
   {
+   "id": "opensandbox",
+   "tipo": "herramienta",
+   "nombre": "OpenSandbox",
+   "url": "https://github.com/opensandbox-group/OpenSandbox",
+   "detalle": "",
+   "fuentes": [],
+   "que": "Encierra a tu agente de IA en una sandbox segura",
+   "repo": "opensandbox-group/OpenSandbox",
+   "descripcion": "Secure, Fast, and Extensible Sandbox runtime for AI agents.",
+   "origen": "Trainbloom GitHub",
+   "fecha": "2026-11-26T12:03:15+00:00",
+   "tema": "encierra-a-tu-agente-de-ia-en-una-sandbox-segura-e24879"
+  },
+  {
    "id": "la-wii-se-hackeaba-poni-ndole-nombre-al-caballo",
    "tipo": "juego",
    "nombre": "LA WII SE HACKEABA PONIÉNDOLE NOMBRE AL CABALLO",
@@ -146,5 +160,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T12:01:10+00:00"
+ "actualizado": "2026-11-26T12:03:15+00:00"
 }
