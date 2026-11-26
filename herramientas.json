@@ -1,6 +1,26 @@
 {
  "herramientas": [
   {
+   "id": "la-wii-se-hackeaba-poni-ndole-nombre-al-caballo",
+   "tipo": "juego",
+   "nombre": "LA WII SE HACKEABA PONIÉNDOLE NOMBRE AL CABALLO",
+   "url": "https://hackaday.com/2026/04/11/digging-into-the-twilight-hack-that-brought-us-wii-homebrew",
+   "detalle": "Hackaday",
+   "fuentes": [
+    {
+     "medio": "WiiBrew",
+     "titulo": "Twilight Hack",
+     "url": "https://wiibrew.org/wiki/Twilight_hack"
+    }
+   ],
+   "que": "Digging Into The Twilight Hack That Brought Us Wii Homebrew",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T12:01:10+00:00",
+   "tema": "la-wii-se-hackeaba-poniendole-nombre-al-caballo-3d6898"
+  },
+  {
    "id": "10-d-lares-y-una-mentira-as-entraron-en-ea",
    "tipo": "juego",
    "nombre": "10 DÓLARES Y UNA MENTIRA: ASÍ ENTRARON EN EA",
@@ -126,5 +146,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:58:49+00:00"
+ "actualizado": "2026-11-26T12:01:10+00:00"
 }
