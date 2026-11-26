@@ -1,6 +1,26 @@
 {
  "herramientas": [
   {
+   "id": "aceptar-una-invitaci-n-de-cs-go-te-costaba-el-pc",
+   "tipo": "juego",
+   "nombre": "ACEPTAR UNA INVITACIÓN DE CS:GO TE COSTABA EL PC",
+   "url": "https://secret.club/2021/04/20/source-engine-rce-invite.html",
+   "detalle": "secret.club",
+   "fuentes": [
+    {
+     "medio": "BleepingComputer",
+     "titulo": "CS:GO, Valve Source games vulnerable to hacking using Steam invites",
+     "url": "https://www.bleepingcomputer.com/news/security/cs-go-valve-source-games-vulnerable-to-hacking-using-steam-invites/"
+    }
+   ],
+   "que": "CVE-2021-30481: Source engine remote code execution via game invites",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:57:15+00:00",
+   "tema": "aceptar-una-invitacion-de-cs-go-te-costaba-el-pc-88cf25"
+  },
+  {
    "id": "as-sabe-denuvo-que-es-tu-pc",
    "tipo": "juego",
    "nombre": "ASÍ SABE DENUVO QUE ES TU PC",
@@ -86,5 +106,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:55:13+00:00"
+ "actualizado": "2026-11-26T11:57:15+00:00"
 }
