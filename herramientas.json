@@ -1,6 +1,26 @@
 {
  "herramientas": [
   {
+   "id": "un-clic-y-tu-cuenta-de-fortnite-era-suya",
+   "tipo": "juego",
+   "nombre": "UN CLIC Y TU CUENTA DE FORTNITE ERA SUYA",
+   "url": "https://research.checkpoint.com/2019/hacking-fortnite",
+   "detalle": "Check Point Research",
+   "fuentes": [
+    {
+     "medio": "The Register",
+     "titulo": "Epic's Fortnite fail: Ancient UT2004 server used for login-stealing proof-of-concept",
+     "url": "https://www.theregister.com/security/2019/01/16/epics-fortnite-fail-ancient-ut2004-server-used-for-login-stealing-proof-of-concept/638263"
+    }
+   ],
+   "que": "Hacking Fortnite Accounts",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:53:41+00:00",
+   "tema": "un-clic-y-tu-cuenta-de-fortnite-era-suya-90477a"
+  },
+  {
    "id": "el-antitrampas-de-street-fighter-era-una-puerta-trasera",
    "tipo": "juego",
    "nombre": "EL ANTITRAMPAS DE STREET FIGHTER ERA UNA PUERTA TRASERA",
@@ -41,5 +61,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:51:10+00:00"
+ "actualizado": "2026-11-26T11:53:41+00:00"
 }
