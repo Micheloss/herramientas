@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Herramientas · CyberForged</title>
-<meta name="description" content="Todas las herramientas de los vídeos de CyberForged, con su enlace.">
+<title>Enlaces · CyberForged</title>
+<meta name="description" content="Las herramientas, los artículos y las investigaciones de los vídeos de CyberForged.">
 <style>
   :root {
     --fondo: #0d1117; --tarjeta: #161b22; --borde: #30363d; --texto: #e6edf3; --suave: #8b949e;
@@ -16,7 +16,11 @@
   main { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
   h1 { font-size: 28px; line-height: 1.2; margin: 0 0 6px; }
   h1 span { color: var(--acento); }
-  .sub { color: var(--suave); margin: 0 0 20px; }
+  .sub { color: var(--suave); margin: 0 0 18px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+  .tabs button { flex: 1 1 0; min-width: 0; padding: 10px 8px; border-radius: 10px; border: 1px solid var(--borde);
+    background: var(--tarjeta); color: var(--suave); font: 600 15px/1.2 inherit; cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--acento); color: #111; border-color: var(--acento); }
   input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--borde);
     background: var(--tarjeta); color: var(--texto); font-size: 16px; margin-bottom: 18px; }
   input:focus { outline: 2px solid var(--enlace); border-color: transparent; }
@@ -28,34 +32,44 @@
   .fecha { color: var(--suave); font-size: 13px; white-space: nowrap; }
   .etq { display: inline-block; background: var(--acento); color: #111; font-size: 12px; font-weight: 700;
     border-radius: 999px; padding: 1px 8px; margin-left: 6px; vertical-align: 2px; }
-  .que { margin: 6px 0 10px; }
-  .repo { color: var(--suave); font-size: 13px; word-break: break-all; }
+  .que { margin: 6px 0 4px; }
+  .det { color: var(--suave); font-size: 13px; word-break: break-word; }
   a.boton { display: inline-block; margin-top: 10px; background: #238636; color: #fff; text-decoration: none;
     font-weight: 600; padding: 9px 14px; border-radius: 8px; }
-  a.boton:active { transform: translateY(1px); }
+  .otras { margin: 10px 0 0; padding-left: 18px; font-size: 14px; }
+  .otras a { color: var(--enlace); }
   .vacio { color: var(--suave); text-align: center; padding: 30px 0; }
   footer { color: var(--suave); font-size: 13px; text-align: center; margin-top: 36px; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Herramientas de <span>CyberForged</span></h1>
-  <p class="sub">Todas las herramientas de mis vídeos, con su enlace. La del último vídeo, arriba del todo.</p>
-  <input id="buscar" type="search" placeholder="Busca una herramienta…" aria-label="Buscar una herramienta">
+  <h1>Enlaces de <span>CyberForged</span></h1>
+  <p class="sub">Todo lo que sale en mis vídeos, con su enlace. Lo del último vídeo, arriba del todo.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" data-tipo="herramienta" data-ancla="herramientas">Herramientas</button>
+    <button role="tab" data-tipo="articulo" data-ancla="articulos">Artículos</button>
+    <button role="tab" data-tipo="juego" data-ancla="juegos">Juegos</button>
+  </div>
+  <input id="buscar" type="search" placeholder="Buscar…" aria-label="Buscar">
   <div id="lista" class="lista"><p class="vacio">Cargando…</p></div>
-  <footer>Úsalas solo sobre lo que es tuyo o tienes permiso para probar.</footer>
+  <footer>Las herramientas, úsalas solo sobre lo que es tuyo o tienes permiso para probar.</footer>
 </main>
 <script>
 (function () {
+  var TEXTO = {
+    herramienta: { boton: "Abrir la herramienta →", vacio: "Aún no hay herramientas." },
+    articulo: { boton: "Leer el artículo →", vacio: "Aún no hay artículos." },
+    juego: { boton: "Leer la investigación original →", vacio: "Aún no hay investigaciones." }
+  };
   var lista = document.getElementById("lista");
   var buscar = document.getElementById("buscar");
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabs button"));
   var todas = [];
-  function norm(s) {
-    return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-  }
+  var tipo = "herramienta";
+  function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
   function fecha(iso) {
-    if (!iso) return "";
-    var d = new Date(iso);
+    var d = new Date(iso || "");
     return isNaN(d) ? "" : d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" });
   }
   function el(tag, cls, txt) {
@@ -64,14 +78,26 @@
     if (txt != null) e.textContent = txt;
     return e;
   }
+  function enlace(url, txt) {
+    var a = el("a", null, txt);
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    return a;
+  }
+  function elegir(t, ancla) {
+    tipo = t;
+    tabs.forEach(function (b) { b.setAttribute("aria-selected", String(b.dataset.tipo === t)); });
+    if (ancla && history.replaceState) history.replaceState(null, "", "#" + ancla);
+    pintar();
+  }
   function pintar() {
     var q = norm(buscar.value);
     var vistas = todas.filter(function (h) {
-      return !q || norm([h.nombre, h.que, h.repo, h.descripcion].join(" ")).indexOf(q) >= 0;
+      return (h.tipo || "herramienta") === tipo &&
+        (!q || norm([h.nombre, h.que, h.repo, h.detalle, h.descripcion].join(" ")).indexOf(q) >= 0);
     });
     lista.textContent = "";
     if (!vistas.length) {
-      lista.appendChild(el("p", "vacio", q ? "No hay ninguna con eso." : "Aún no hay herramientas."));
+      lista.appendChild(el("p", "vacio", q ? "No hay nada con eso." : TEXTO[tipo].vacio));
       return;
     }
     vistas.forEach(function (h, i) {
@@ -83,15 +109,30 @@
       fila.appendChild(n);
       fila.appendChild(el("span", "fecha", fecha(h.fecha)));
       c.appendChild(fila);
-      if (h.que) c.appendChild(el("p", "que", h.que));
-      if (h.repo) c.appendChild(el("div", "repo", h.repo));
-      var a = el("a", "boton", "Abrir la herramienta →");
-      a.href = h.url; a.target = "_blank"; a.rel = "noopener";
+      if (h.que && h.que !== h.nombre) c.appendChild(el("p", "que", h.que));
+      var det = [h.detalle, h.repo].filter(Boolean).join(" · ");
+      if (det) c.appendChild(el("div", "det", det));
+      var a = enlace(h.url, TEXTO[tipo].boton);
+      a.className = "boton";
       c.appendChild(a);
+      if (h.fuentes && h.fuentes.length) {
+        var ul = el("ul", "otras");
+        h.fuentes.forEach(function (f) {
+          var li = el("li");
+          li.appendChild(enlace(f.url, f.medio || f.titulo || f.url));
+          ul.appendChild(li);
+        });
+        c.appendChild(el("div", "det", "Más fuentes:"));
+        c.appendChild(ul);
+      }
       lista.appendChild(c);
     });
   }
+  tabs.forEach(function (b) { b.addEventListener("click", function () { elegir(b.dataset.tipo, b.dataset.ancla); }); });
   buscar.addEventListener("input", pintar);
+  var ancla = (location.hash || "").slice(1);
+  var inicial = tabs.filter(function (b) { return b.dataset.ancla === ancla; })[0];
+  elegir(inicial ? inicial.dataset.tipo : "herramienta");
   fetch("herramientas.json", { cache: "no-store" })
     .then(function (r) { return r.json(); })
     .then(function (d) {
@@ -99,10 +140,6 @@
         return String(b.fecha || "").localeCompare(String(a.fecha || ""));
       });
       pintar();
-      if (location.hash) {
-        var t = document.getElementById(location.hash.slice(1));
-        if (t) t.scrollIntoView();
-      }
     })
     .catch(function () { lista.textContent = ""; lista.appendChild(el("p", "vacio", "No se pudo cargar la lista.")); });
 })();
