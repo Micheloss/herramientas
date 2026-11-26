@@ -1,6 +1,20 @@
 {
  "herramientas": [
   {
+   "id": "airgorah",
+   "tipo": "herramienta",
+   "nombre": "airgorah",
+   "url": "https://github.com/martin-olivier/airgorah",
+   "detalle": "",
+   "fuentes": [],
+   "que": "Audita la seguridad de tu WiFi con una interfaz gráfica",
+   "repo": "martin-olivier/airgorah",
+   "descripcion": "A WiFi security auditing software",
+   "origen": "Trainbloom GitHub",
+   "fecha": "2026-11-26T12:07:13+00:00",
+   "tema": "audita-la-seguridad-de-tu-wifi-con-una-interfaz-grafica-fbf206"
+  },
+  {
    "id": "bitnet",
    "tipo": "herramienta",
    "nombre": "BitNet",
@@ -174,5 +188,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T12:05:33+00:00"
+ "actualizado": "2026-11-26T12:07:13+00:00"
 }
