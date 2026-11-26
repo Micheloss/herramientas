@@ -1,6 +1,26 @@
 {
  "herramientas": [
   {
+   "id": "10-d-lares-y-una-mentira-as-entraron-en-ea",
+   "tipo": "juego",
+   "nombre": "10 DÓLARES Y UNA MENTIRA: ASÍ ENTRARON EN EA",
+   "url": "https://www.vice.com/en/article/how-ea-games-was-hacked-slack",
+   "detalle": "VICE (Motherboard)",
+   "fuentes": [
+    {
+     "medio": "Gizmodo",
+     "titulo": "Electronic Arts Hackers Say Slack Was Their Secret Weapon",
+     "url": "https://gizmodo.com/electronic-arts-hackers-say-slack-was-their-secret-weap-1847083532"
+    }
+   ],
+   "que": "How Hackers Used Slack to Break into EA Games",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:58:49+00:00",
+   "tema": "10-dolares-y-una-mentira-asi-entraron-en-ea-938196"
+  },
+  {
    "id": "aceptar-una-invitaci-n-de-cs-go-te-costaba-el-pc",
    "tipo": "juego",
    "nombre": "ACEPTAR UNA INVITACIÓN DE CS:GO TE COSTABA EL PC",
@@ -106,5 +126,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:57:15+00:00"
+ "actualizado": "2026-11-26T11:58:49+00:00"
 }
