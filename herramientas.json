@@ -1,6 +1,31 @@
 {
  "herramientas": [
   {
+   "id": "as-sabe-denuvo-que-es-tu-pc",
+   "tipo": "juego",
+   "nombre": "ASÍ SABE DENUVO QUE ES TU PC",
+   "url": "https://momo5502.com/posts/2024-03-31-bypassing-denuvo-in-hogwarts-legacy",
+   "detalle": "Blog de Maurice Heumann (momo5502)",
+   "fuentes": [
+    {
+     "medio": "80 Level",
+     "titulo": "The Denuvo System in Hogwarts Legacy Explained by a DRM Developer",
+     "url": "https://80.lv/articles/the-denuvo-system-in-hogwarts-legacy-explained-by-a-drm-developer"
+    },
+    {
+     "medio": "Tom's Hardware",
+     "titulo": "A brief history of Denuvo DRM and the new hypervisor bypass",
+     "url": "https://www.tomshardware.com/video-games/pc-gaming/a-brief-history-of-denuvo-drm-and-the-new-hypervisor-bypass-inside-the-cat-and-mouse-game-between-denuvo-and-the-piracy-scene"
+    }
+   ],
+   "que": "Bypassing Denuvo in Hogwarts Legacy",
+   "repo": "",
+   "descripcion": "",
+   "origen": "Trainbloom Game hacking",
+   "fecha": "2026-11-26T11:55:13+00:00",
+   "tema": "asi-sabe-denuvo-que-es-tu-pc-eabfb7"
+  },
+  {
    "id": "un-clic-y-tu-cuenta-de-fortnite-era-suya",
    "tipo": "juego",
    "nombre": "UN CLIC Y TU CUENTA DE FORTNITE ERA SUYA",
@@ -61,5 +86,5 @@
    "tema": "el-cheat-de-warzone-que-te-hackeaba-a-ti-163f84"
   }
  ],
- "actualizado": "2026-11-26T11:53:41+00:00"
+ "actualizado": "2026-11-26T11:55:13+00:00"
 }
